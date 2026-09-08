@@ -15,7 +15,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import duckdb
 import numpy as np
-from rapidfuzz import process, fuzz
+from rapidfuzz import process, fuzz, utils
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 PARQUET_DIR = BASE_DIR / "data"
@@ -78,7 +78,8 @@ class SQLForensicTool:
         match = process.extractOne(
             clean_input,
             all_vendors,
-            scorer=fuzz.token_set_ratio
+            scorer=fuzz.token_sort_ratio,
+            processor=utils.default_process
         )
 
         if match and match[1] >= threshold:
