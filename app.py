@@ -592,7 +592,7 @@ with gr.Blocks(title="SI-FOREN") as demo:
         )
         submit_btn = gr.Button("Mulai Analisis Pasar →", variant="primary", scale=1)
 
-    gr.Markdown(f"**Basis Data Aktif:** `{TOTAL_PKTS_STR} Lelang SPSE (Rp 249,17T HPS)` · **Model:** `Qwen2.5-72B-Instruct` · **Engine:** `DuckDB & NetworkX`")
+    gr.Markdown(f"**Basis Data Aktif:** `{TOTAL_PKTS_STR} Lelang SPSE (Rp 249,17T HPS)` · **Model:** `Qwen2.5-72B-Instruct`")
 
     # ── 4. Dynamic Filters ──
     with gr.Row():
@@ -651,7 +651,7 @@ with gr.Blocks(title="SI-FOREN") as demo:
         # Disclaimer Footer
         gr.HTML("""
         <div class="disclaimer-card">
-            <div style="font-weight: 600; color: #D97706; margin-bottom: 0.35rem; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.06em;">Catatan Kepatuhan &amp; Disclaimer Intelijen Pasar</div>
+            <div style="font-weight: 600; color: #D97706; margin-bottom: 0.35rem; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.06em;">Catatan Kepatuhan &amp; Disclaimer</div>
             <div style="font-size: 0.86rem; color: #A1A1AA; line-height: 1.6;">
                 Platform ini merupakan instrumen analitik intelijen pasar dan penapisan komersial berbasis data terbuka pengadaan publik (SPSE). Seluruh metrik, konversi tender, dan perbandingan harga penawaran dihitung secara empiris untuk mendukung analisis strategi bisnis dan uji kepatuhan internal. Keputusan keikutsertaan tender dan verifikasi kualifikasi teknis/hukum sepenuhnya merupakan tanggung jawab masing-masing entitas pelaku usaha.
             </div>
