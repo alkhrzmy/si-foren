@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 880" width="1500" height="880">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap');
+      text { font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+    
+    <!-- Arrow Markers -->
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 8 5 L 0 8 z" fill="#0F62FE"/>
+    </marker>
+    <marker id="arr-dark" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 8 5 L 0 8 z" fill="#161616"/>
+    </marker>
+  </defs>
+
+  <!-- ── Canvas Background (Pure Clean White) ────────────────────────────── -->
+  <rect width="1500" height="880" fill="#FFFFFF"/>
+
+  <!-- ── TOP MASTHEAD BANNER ─────────────────────────────────────────────── -->
+  <g transform="translate(60, 28)">
+    <text x="0" y="24" fill="#161616" font-size="20" font-weight="700" letter-spacing="-0.02em">SI-FOREN: B2B Procurement Intelligence Architecture</text>
+    <text x="0" y="46" fill="#525252" font-size="12.5" font-weight="400">On-Premises Multi-Modal Data Engine (DuckDB &amp; NetworkX) with Cloud Cognitive LLM Reasoning</text>
+  </g>
+
+  <!-- ── ACTORS OUTSIDE CLIENT LOCATION (Far Left) ───────────────────────── -->
+  <!-- Actor 1: Data Engineer (Top Left) -->
+  <g transform="translate(45, 225)">
+    <circle cx="35" cy="20" r="14" fill="none" stroke="#161616" stroke-width="2"/>
+    <path d="M 12 55 C 12 40, 58 40, 58 55" fill="none" stroke="#161616" stroke-width="2"/>
+    <text x="35" y="75" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">Data Engineer</text>
+  </g>
+
+  <!-- Actor 2: User (Bottom Left) -->
+  <g transform="translate(45, 565)">
+    <circle cx="35" cy="20" r="14" fill="none" stroke="#161616" stroke-width="2"/>
+    <path d="M 12 55 C 12 40, 58 40, 58 55" fill="none" stroke="#161616" stroke-width="2"/>
+    <text x="35" y="75" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">User</text>
+  </g>
+
+  <!-- ── BOUNDARY 1: Client Location (On-Premises / Local Sovereignty) ──── -->
+  <g transform="translate(180, 115)">
+    <rect width="900" height="725" rx="2" fill="none" stroke="#0F62FE" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <text x="20" y="-14" fill="#0F62FE" font-size="13.5" font-weight="700" letter-spacing="0.05em">Client Location (On-Premises)</text>
+  </g>
+
+  <!-- ── BOUNDARY 2: Cloud Services & External AI (Right Box) ───────────── -->
+  <g transform="translate(1120, 115)">
+    <rect width="320" height="725" rx="2" fill="none" stroke="#0F62FE" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <text x="20" y="-14" fill="#0F62FE" font-size="13.5" font-weight="700" letter-spacing="0.05em">Cloud (SaaS) / External AI</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- TOP PIPELINE: DATA INGESTION AND INDEXING (STEPS 1–3)                -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Node: SPSE Raw Data -->
+  <g transform="translate(230, 225)">
+    <rect width="110" height="65" rx="3" fill="#0F62FE"/>
+    <rect x="42" y="15" width="22" height="26" rx="2" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <line x1="47" y1="22" x2="59" y2="22" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="47" y1="28" x2="59" y2="28" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="47" y1="34" x2="55" y2="34" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="55" y="85" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">SPSE Data</text>
+  </g>
+
+  <!-- Node: Data Processing (ETL) -->
+  <g transform="translate(460, 225)">
+    <rect width="110" height="65" rx="3" fill="#0F62FE"/>
+    <circle cx="55" cy="32" r="11" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="55" cy="32" r="4" fill="#FFFFFF"/>
+    <text x="55" y="85" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">Data Processing</text>
+  </g>
+
+  <!-- Node: Graph & Indexing -->
+  <g transform="translate(690, 225)">
+    <rect width="110" height="65" rx="3" fill="#0F62FE"/>
+    <rect x="40" y="18" width="12" height="12" rx="1" fill="#FFFFFF"/>
+    <rect x="58" y="18" width="12" height="12" rx="1" fill="#FFFFFF"/>
+    <rect x="40" y="36" width="12" height="12" rx="1" fill="#FFFFFF"/>
+    <rect x="58" y="36" width="12" height="12" rx="1" fill="#FFFFFF"/>
+    <text x="55" y="85" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">Graph &amp; Indexing</text>
+  </g>
+
+  <!-- Node: Multi-Modal Store (DuckDB & NetworkX) -->
+  <g transform="translate(910, 218)">
+    <rect width="140" height="74" rx="3" fill="#0F62FE"/>
+    <path d="M 55 18 C 55 14, 85 14, 85 18 C 85 22, 55 22, 55 18 Z" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <path d="M 55 18 L 55 42 C 55 46, 85 46, 85 42 L 85 18" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <path d="M 55 30 C 55 34, 85 34, 85 30" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="70" y="92" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">Multi-Modal Store</text>
+    <text x="70" y="107" fill="#525252" font-size="11" text-anchor="middle">(DuckDB &amp; NetworkX)</text>
+  </g>
+
+  <!-- ── Top Pipeline Arrows & Badges ── -->
+  <!-- Step 1: Data Engineer -> SPSE Data -->
+  <path d="M 120 257 L 225 257" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="172" y="220" fill="#161616" font-size="11" text-anchor="middle">Ingest / Prepare</text>
+  <circle cx="172" cy="240" r="9" fill="#8D8D8D"/>
+  <text x="172" y="243.5" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">1</text>
+
+  <!-- Step 2: SPSE Data -> Data Processing -->
+  <path d="M 345 257 L 455 257" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="400" y="220" fill="#161616" font-size="11" text-anchor="middle">Extract &amp; Clean</text>
+  <circle cx="400" cy="240" r="9" fill="#8D8D8D"/>
+  <text x="400" y="243.5" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">2</text>
+
+  <!-- Step 3a: Data Processing -> Graph & Indexing -->
+  <path d="M 575 257 L 685 257" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="630" y="220" fill="#161616" font-size="11" text-anchor="middle">Build Topology</text>
+  <circle cx="630" cy="240" r="9" fill="#8D8D8D"/>
+  <text x="630" y="243.5" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">3</text>
+
+  <!-- Step 3b: Graph & Indexing -> Multi-Modal Store -->
+  <path d="M 805 245 L 905 245" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="855" y="232" fill="#161616" font-size="10.5" text-anchor="middle">Save Local</text>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+  <!-- BOTTOM PIPELINE: QUERY AND COGNITIVE ADVISORY (STEPS 4–7)            -->
+  <!-- ══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Node: Semantic Gatekeeper (Security Guardrail & Intent Filter) -->
+  <g transform="translate(230, 570)">
+    <rect width="110" height="65" rx="3" fill="#0F62FE"/>
+    <path d="M 55 18 L 68 23 L 68 35 C 68 44, 55 49, 55 49 C 55 49, 42 44, 42 35 L 42 23 Z" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <text x="55" y="85" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">Gatekeeper</text>
+    <text x="55" y="100" fill="#525252" font-size="10" text-anchor="middle">(Security &amp; Intent)</text>
+  </g>
+
+  <!-- Node: SI-FOREN App (Streamlit Orchestrator) -->
+  <g transform="translate(460, 570)">
+    <rect width="120" height="65" rx="3" fill="#0F62FE"/>
+    <rect x="43" y="18" width="34" height="24" rx="2" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <line x1="43" y1="26" x2="77" y2="26" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="53" y1="26" x2="53" y2="42" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="60" y="85" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">SI-FOREN App</text>
+  </g>
+
+  <!-- Node: Cognitive LLM (Qwen2.5-72B) in Cloud Zone -->
+  <g transform="translate(1210, 570)">
+    <rect width="130" height="70" rx="3" fill="#0F62FE"/>
+    <rect x="49" y="20" width="32" height="24" rx="3" fill="none" stroke="#FFFFFF" stroke-width="1.8"/>
+    <line x1="57" y1="27" x2="69" y2="27" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="57" y1="33" x2="69" y2="33" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="57" y1="39" x2="65" y2="39" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="45" y1="26" x2="49" y2="26" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="45" y1="36" x2="49" y2="36" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="81" y1="26" x2="85" y2="26" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="81" y1="36" x2="85" y2="36" stroke="#FFFFFF" stroke-width="1.5"/>
+    <text x="65" y="90" fill="#161616" font-size="13" font-weight="600" text-anchor="middle">Cognitive LLM</text>
+    <text x="65" y="105" fill="#525252" font-size="11" text-anchor="middle">(Qwen2.5-72B)</text>
+  </g>
+
+  <!-- ── Bottom Pipeline Arrows & Badges ── -->
+  <!-- Step 4a: User -> Gatekeeper -->
+  <path d="M 120 590 L 225 590" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="172" y="572" fill="#161616" font-size="11" text-anchor="middle">Query</text>
+  <circle cx="172" cy="590" r="9" fill="#8D8D8D"/>
+  <text x="172" y="593.5" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">4</text>
+
+  <!-- Step 4b: Gatekeeper -> SI-FOREN App -->
+  <path d="M 345 602 L 455 602" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="400" y="590" fill="#161616" font-size="10.5" text-anchor="middle">Validated Intent</text>
+
+  <!-- Step 5: SI-FOREN App -> Multi-Modal Store (Enters LEFT side through clear corridor at y=340) -->
+  <path d="M 520 570 L 520 340 L 860 340 L 860 270 L 905 270" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="690" y="330" fill="#161616" font-size="11" text-anchor="middle">Deterministic Retrieval (SQL Funnel &amp; Graph Q3)</text>
+  <circle cx="690" cy="340" r="9" fill="#8D8D8D"/>
+  <text x="690" y="343.5" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">5</text>
+
+  <!-- Step 6: SI-FOREN App -> Cognitive LLM (Clean horizontal arrow) -->
+  <path d="M 585 588 L 1205 588" fill="none" stroke="#161616" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+  <text x="895" y="575" fill="#161616" font-size="11" text-anchor="middle">Send Query + Funnel Facts + Incumbent Benchmark</text>
+  <circle cx="895" cy="588" r="9" fill="#8D8D8D"/>
+  <text x="895" y="591.5" fill="#FFFFFF" font-size="10" font-weight="700" text-anchor="middle">6</text>
+
+  <!-- Step 7a: Cognitive LLM -> SI-FOREN App (Parallel return arrow) -->
+  <path d="M 1205 618 L 585 618" fill="none" stroke="#0F62FE" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <text x="895" y="635" fill="#0F62FE" font-size="11.5" font-weight="600" text-anchor="middle">Generate Strategic Advisory (Structured JSON)</text>
+  <circle cx="895" cy="618" r="9" fill="#0F62FE"/>
+  <text x="895" y="621.5" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">7a</text>
+
+  <!-- Step 7b: SI-FOREN App -> User (Clearance at y=710, completely BELOW Gatekeeper without overlap) -->
+  <path d="M 490 635 L 490 710 L 145 710 L 145 615 L 120 615" fill="none" stroke="#0F62FE" stroke-width="1.8" marker-end="url(#arr-blue)"/>
+  <text x="315" y="732" fill="#0F62FE" font-size="11.5" font-weight="600" text-anchor="middle">Return Commercial Intelligence Dossier</text>
+  <circle cx="315" cy="710" r="9" fill="#0F62FE"/>
+  <text x="315" y="713.5" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">7b</text>
+
+</svg>
