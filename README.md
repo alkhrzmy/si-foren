@@ -3,8 +3,7 @@ title: SI-FOREN
 emoji: ⚖️
 colorFrom: yellow
 colorTo: red
-sdk: streamlit
-sdk_version: 1.35.0
+sdk: gradio
 app_file: app.py
 pinned: false
 ---

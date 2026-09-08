@@ -46,7 +46,17 @@ class SQLForensicTool:
         return self._all_vendors_cache
 
     def _strip_legal_prefix(self, name: str) -> str:
-        cleaned = re.sub(r"^(PT|CV|PO|UD|KOPERASI|KONSORSIUM|PERUM|KSO)\.?\s+", "", name, flags=re.IGNORECASE)
+        cleaned = name.strip()
+        # Repeatedly strip conversational query prefixes
+        pattern_prefix = r"^(audit|periksa|cek|analisis|evaluasi|profil|kepatuhan|vendor|entitas|afiliasi)\s+"
+        while re.search(pattern_prefix, cleaned, flags=re.IGNORECASE):
+            cleaned = re.sub(pattern_prefix, "", cleaned, flags=re.IGNORECASE).strip()
+
+        # Strip trailing "di <kementerian/lembaga/lokasi>"
+        cleaned = re.sub(r"\s+di\s+[a-zA-Z\s]+$", "", cleaned, flags=re.IGNORECASE).strip()
+
+        # Strip formal legal entity prefixes
+        cleaned = re.sub(r"^(PT|CV|PO|UD|KOPERASI|KONSORSIUM|PERUM|KSO)\.?\s+", "", cleaned, flags=re.IGNORECASE)
         return cleaned.strip()
 
     def resolve_entity_typo(self, raw_vendor_name: str, threshold: float = 72.0) -> Tuple[str, bool, float]:
